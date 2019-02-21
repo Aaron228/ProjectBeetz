@@ -194,16 +194,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Household Size" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="76D-kE-KbV">
-                                <rect key="frame" x="67" y="464" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="householdSizeTextField:" destination="8ii-jV-b9O" eventType="editingDidEnd" id="7fB-3d-mfs"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nBR-HM-gPx">
                                 <rect key="frame" x="67" y="516" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -217,6 +207,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8ii-jV-b9O" id="awN-TZ-hNU"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Market name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-8k-bNc">
                                 <rect key="frame" x="67" y="350" width="240" height="30"/>
@@ -232,13 +225,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Household Size" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="aAv-0d-Ksd">
+                                <rect key="frame" x="67" y="456" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dIe-N8-fSr"/>
                     </view>
                     <connections>
                         <outlet property="customerIDTextField" destination="iJc-TR-2qd" id="Y1g-Sr-Vul"/>
-                        <outlet property="householdSizeTextField" destination="76D-kE-KbV" id="Czm-BV-VYY"/>
+                        <outlet property="householdSizeTextField" destination="aAv-0d-Ksd" id="Dqt-Cv-92x"/>
                         <outlet property="lastNameTextField" destination="4yS-E0-M8D" id="Hmk-4a-P9l"/>
                         <outlet property="marketNameTextField" destination="KGL-8k-bNc" id="rYO-Ja-BX0"/>
                         <outlet property="needIndicatorTextField" destination="BSw-dK-itO" id="zCP-Ww-vHl"/>

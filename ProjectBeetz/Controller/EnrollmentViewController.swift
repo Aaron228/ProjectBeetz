@@ -13,31 +13,16 @@ import Firebase
 import SVProgressHUD
 import ChameleonFramework
 
-class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
     
-    let needIndicatorArray = [String](arrayLiteral: "EBT", "WIC", "Veggie Rx")
+    var currentTextField = UITextField()
+    var pickerView = UIPickerView()
     
-    let languagePickerArray = [String](arrayLiteral: "English", "Chinese", "Japanese")
+    var needIndicatorArray: [String] = []
     
-    let marketPickerArray = [String](arrayLiteral: "Sunnyvale", "Downtown Market", "Midvale")
+    var languagePickerArray: [String] = []
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return languagePickerArray.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return languagePickerArray[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(row)
-    }
-    
-    //Outlets
+    var marketPickerArray: [String] = []
     
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var customerIDTextField: UITextField!
@@ -47,23 +32,97 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var householdSizeTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        needIndicatorArray = ["EBT", "WIC", "Veggie Rx"]
         
+        languagePickerArray = ["English", "Chinese", "Japanese"]
+        
+        marketPickerArray = ["Sunnyvale", "Downtown Market", "Midvale"]
         
         //UI Picker constants
         
-        let languagePicker = UIPickerView()
-       // let marketNamePicker = UIPickerView()
-       // let needIndicatorPicker = UIPickerView()
+        //let languagePicker = UIPickerView()
+        // let marketNamePicker = UIPickerView()
+        // let needIndicatorPicker = UIPickerView()
         
-        primaryLanguageTextField.inputView = languagePicker
-        
-        languagePicker.delegate = self
+        //        primaryLanguageTextField.inputView = languagePicker
+        //
+        //        languagePicker.delegate = self
         
     }
+    
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        if currentTextField == marketNameTextField {
+            return marketPickerArray.count
+        }
+        else if currentTextField == primaryLanguageTextField {
+            return languagePickerArray.count
+        }
+        else if currentTextField == needIndicatorTextField {
+            return needIndicatorArray.count
+        }
+        else {
+            return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if currentTextField == marketNameTextField {
+            return marketPickerArray[row]
+        }
+        else if currentTextField == primaryLanguageTextField {
+            return languagePickerArray[row]
+        }
+        else if currentTextField == needIndicatorTextField {
+            return needIndicatorArray[row]
+        }
+        else {
+            return ""
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if currentTextField == marketNameTextField {
+            marketNameTextField.text = marketPickerArray[row]
+            self.view.endEditing(true)
+        }
+        else if currentTextField == primaryLanguageTextField {
+            primaryLanguageTextField.text = languagePickerArray[row]
+            self.view.endEditing(true)
+        }
+        else if currentTextField == needIndicatorTextField {
+            needIndicatorTextField.text = needIndicatorArray[row]
+            self.view.endEditing(true)
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
+    currentTextField = textField
+        if currentTextField == marketNameTextField {
+            currentTextField.inputView = pickerView
+        }
+        else if currentTextField == primaryLanguageTextField {
+            currentTextField.inputView = pickerView
+        }
+        else if currentTextField == needIndicatorTextField {
+            currentTextField.inputView = pickerView
+        }
+    }
+    
+    //Outlets
+    
+    
     
 
     /*
