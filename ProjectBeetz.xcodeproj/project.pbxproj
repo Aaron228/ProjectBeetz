@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		684F23028FE4C37264226C6E /* Pods_ProjectBeetz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B67AEC3420D9E99A8454E8 /* Pods_ProjectBeetz.framework */; };
 		A4108B47221EC7CA00D2CE2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B46221EC7CA00D2CE2C /* AppDelegate.swift */; };
-		A4108B49221EC7CA00D2CE2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B48221EC7CA00D2CE2C /* ViewController.swift */; };
+		A4108B49221EC7CA00D2CE2C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B48221EC7CA00D2CE2C /* WelcomeViewController.swift */; };
 		A4108B4C221EC7CA00D2CE2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4108B4A221EC7CA00D2CE2C /* Main.storyboard */; };
 		A4108B4E221EC7CB00D2CE2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4108B4D221EC7CB00D2CE2C /* Assets.xcassets */; };
 		A4108B51221EC7CB00D2CE2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4108B4F221EC7CB00D2CE2C /* LaunchScreen.storyboard */; };
+		A4108B59221ECBD700D2CE2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4108B58221ECBD700D2CE2C /* GoogleService-Info.plist */; };
+		A4108B5B221ED2EC00D2CE2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B5A221ED2EC00D2CE2C /* LoginViewController.swift */; };
+		A4108B5D221EDFCE00D2CE2C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B5C221EDFCE00D2CE2C /* RegisterViewController.swift */; };
+		A4108B5F221EE1E100D2CE2C /* DistributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B5E221EE1E100D2CE2C /* DistributionViewController.swift */; };
+		A4108B61221EEA3F00D2CE2C /* EnrollmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B60221EEA3F00D2CE2C /* EnrollmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4108B43221EC7CA00D2CE2C /* ProjectBeetz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectBeetz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4108B46221EC7CA00D2CE2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4108B48221EC7CA00D2CE2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4108B48221EC7CA00D2CE2C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A4108B4B221EC7CA00D2CE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4108B4D221EC7CB00D2CE2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4108B50221EC7CB00D2CE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4108B52221EC7CB00D2CE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4108B58221ECBD700D2CE2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4108B5A221ED2EC00D2CE2C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A4108B5C221EDFCE00D2CE2C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A4108B5E221EE1E100D2CE2C /* DistributionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionViewController.swift; sourceTree = "<group>"; };
+		A4108B60221EEA3F00D2CE2C /* EnrollmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentViewController.swift; sourceTree = "<group>"; };
+		E067FC7FC060755CC68C54FB /* Pods-ProjectBeetz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectBeetz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectBeetz/Pods-ProjectBeetz.debug.xcconfig"; sourceTree = "<group>"; };
+		F38066E879D6E615D85BF696 /* Pods-ProjectBeetz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectBeetz.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectBeetz/Pods-ProjectBeetz.release.xcconfig"; sourceTree = "<group>"; };
+		F5B67AEC3420D9E99A8454E8 /* Pods_ProjectBeetz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectBeetz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				684F23028FE4C37264226C6E /* Pods_ProjectBeetz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C141A7E1DF85933A5872048 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E067FC7FC060755CC68C54FB /* Pods-ProjectBeetz.debug.xcconfig */,
+				F38066E879D6E615D85BF696 /* Pods-ProjectBeetz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A4108B3A221EC7CA00D2CE2C = {
 			isa = PBXGroup;
 			children = (
 				A4108B45221EC7CA00D2CE2C /* ProjectBeetz */,
 				A4108B44221EC7CA00D2CE2C /* Products */,
+				2C141A7E1DF85933A5872048 /* Pods */,
+				C578C2D9052FFB79F8BA38A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,51 @@
 		A4108B45221EC7CA00D2CE2C /* ProjectBeetz */ = {
 			isa = PBXGroup;
 			children = (
-				A4108B46221EC7CA00D2CE2C /* AppDelegate.swift */,
-				A4108B48221EC7CA00D2CE2C /* ViewController.swift */,
-				A4108B4A221EC7CA00D2CE2C /* Main.storyboard */,
+				A4108B64221EF27600D2CE2C /* Controller */,
+				A4108B63221EF26F00D2CE2C /* View */,
+				A4108B62221EF26500D2CE2C /* Model */,
 				A4108B4D221EC7CB00D2CE2C /* Assets.xcassets */,
-				A4108B4F221EC7CB00D2CE2C /* LaunchScreen.storyboard */,
 				A4108B52221EC7CB00D2CE2C /* Info.plist */,
+				A4108B58221ECBD700D2CE2C /* GoogleService-Info.plist */,
 			);
 			path = ProjectBeetz;
+			sourceTree = "<group>";
+		};
+		A4108B62221EF26500D2CE2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4108B63221EF26F00D2CE2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4108B4F221EC7CB00D2CE2C /* LaunchScreen.storyboard */,
+				A4108B4A221EC7CA00D2CE2C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4108B64221EF27600D2CE2C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4108B46221EC7CA00D2CE2C /* AppDelegate.swift */,
+				A4108B48221EC7CA00D2CE2C /* WelcomeViewController.swift */,
+				A4108B5A221ED2EC00D2CE2C /* LoginViewController.swift */,
+				A4108B5C221EDFCE00D2CE2C /* RegisterViewController.swift */,
+				A4108B5E221EE1E100D2CE2C /* DistributionViewController.swift */,
+				A4108B60221EEA3F00D2CE2C /* EnrollmentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C578C2D9052FFB79F8BA38A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5B67AEC3420D9E99A8454E8 /* Pods_ProjectBeetz.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4108B55221EC7CB00D2CE2C /* Build configuration list for PBXNativeTarget "ProjectBeetz" */;
 			buildPhases = (
+				DDDA85FDC01123F44197BDB7 /* [CP] Check Pods Manifest.lock */,
 				A4108B3F221EC7CA00D2CE2C /* Sources */,
 				A4108B40221EC7CA00D2CE2C /* Frameworks */,
 				A4108B41221EC7CA00D2CE2C /* Resources */,
+				476C90C2C618F0AECA7A6383 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4108B59221ECBD700D2CE2C /* GoogleService-Info.plist in Resources */,
 				A4108B51221EC7CB00D2CE2C /* LaunchScreen.storyboard in Resources */,
 				A4108B4E221EC7CB00D2CE2C /* Assets.xcassets in Resources */,
 				A4108B4C221EC7CA00D2CE2C /* Main.storyboard in Resources */,
@@ -130,13 +196,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		476C90C2C618F0AECA7A6383 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ProjectBeetz/Pods-ProjectBeetz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectBeetz/Pods-ProjectBeetz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDDA85FDC01123F44197BDB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProjectBeetz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4108B3F221EC7CA00D2CE2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4108B49221EC7CA00D2CE2C /* ViewController.swift in Sources */,
+				A4108B61221EEA3F00D2CE2C /* EnrollmentViewController.swift in Sources */,
+				A4108B5B221ED2EC00D2CE2C /* LoginViewController.swift in Sources */,
+				A4108B49221EC7CA00D2CE2C /* WelcomeViewController.swift in Sources */,
 				A4108B47221EC7CA00D2CE2C /* AppDelegate.swift in Sources */,
+				A4108B5D221EDFCE00D2CE2C /* RegisterViewController.swift in Sources */,
+				A4108B5F221EE1E100D2CE2C /* DistributionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +407,7 @@
 		};
 		A4108B56221EC7CB00D2CE2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E067FC7FC060755CC68C54FB /* Pods-ProjectBeetz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +426,7 @@
 		};
 		A4108B57221EC7CB00D2CE2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F38066E879D6E615D85BF696 /* Pods-ProjectBeetz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

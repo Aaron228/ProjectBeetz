@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>989420165835-slf1n5o6an1oj2mntvcj6bpctbrdo2a7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.989420165835-slf1n5o6an1oj2mntvcj6bpctbrdo2a7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBEvJ5ECefzHu3_Akodj2lS8pcVjH-U614</string>
+	<key>GCM_SENDER_ID</key>
+	<string>989420165835</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.aaronlee.ProjectBeetz</string>
+	<key>PROJECT_ID</key>
+	<string>projectbeetz</string>
+	<key>STORAGE_BUCKET</key>
+	<string>projectbeetz.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:989420165835:ios:34f6cc0205873f2b</string>
+	<key>DATABASE_URL</key>
+	<string>https://projectbeetz.firebaseio.com</string>
+</dict>
+</plist>
