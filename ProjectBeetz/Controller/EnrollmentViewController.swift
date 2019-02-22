@@ -123,60 +123,141 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
     //Enroll button sends customer info to FireStore database and sets the state to the Distribute VC.
     
     
-    @IBAction func enrollButtonPressed(_ sender: UIButton) {
+//    @IBAction func enrollButtonPressed(_ sender: UIButton) {
+//
+//        Firestore.firestore().collection(CUSTOMERS_REF).addDocument(data: [
+//            LAST_NAME : lastNameTextField.text!,
+//            NEED_INDICATOR : needIndicatorTextField.text!,
+//            CUSTOMER_ID : customerIDTextField.text!,
+//            PRIMARY_LANGUAGE : primaryLanguageTextField.text!,
+//            MARKET_NAME : marketNameTextField.text!,
+//            HOUSEHOLD_SIZE : householdSizeTextField.text!,
+//            //DATE_ENROLLED :  FieldValue.serverTimestamp(),
+//            ZIP_CODE : zipCodeTextField.text!
+//
+//        ]) { (err) in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//            } else {
+//                let alert = UIAlertController(title: "Customer Created!!", message: "Would you like to make a DISTRIBUTION? Or, create another CUSTOMER?", preferredStyle: .alert)
+//
+//                let distributeAction = UIAlertAction(title: "Distribute", style: .default, handler: { (UIAlertAction) in
+//                    self.goToDistributePage()
+//                })
+//
+//                let enrollAgainAction = UIAlertAction(title: "Enrollment", style: .default
+//                    , handler: { (UIAlertAction) in
+//                        self.createAnotherCustomer()
+//                })
+//
+//                alert.addAction(distributeAction)
+//                alert.addAction(enrollAgainAction)
+//
+//                self.present(alert, animated: true, completion: nil)
+//
+//                //self.performSegue(withIdentifier: "makeADistribution", sender: self)
+//            }
+//        }
+//    }
+//
+//    func goToDistributePage() {
+//
+//        self.performSegue(withIdentifier: "goToDistributionViewController", sender: self)
+//
+//    }
+//
+//    func createAnotherCustomer() {
+//
+//        self.performSegue(withIdentifier: "doToDistributionViewController" , sender: self)
+//    }
+    
+    // Add items buttons along the right hand side of the Enrollment view controller. Thanks Angela Yu.
         
-        Firestore.firestore().collection(CUSTOMERS_REF).addDocument(data: [
-            LAST_NAME : lastNameTextField.text!,
-            NEED_INDICATOR : needIndicatorTextField.text!,
-            CUSTOMER_ID : customerIDTextField.text!,
-            PRIMARY_LANGUAGE : primaryLanguageTextField.text!,
-            MARKET_NAME : marketNameTextField.text!,
-            HOUSEHOLD_SIZE : householdSizeTextField.text!,
-            //DATE_ENROLLED :  FieldValue.serverTimestamp(),
-            ZIP_CODE : zipCodeTextField.text!
-            
-        ]) { (err) in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                let alert = UIAlertController(title: "Customer Created!!", message: "Would you like to make a DISTRIBUTION? Or, create another CUSTOMER?", preferredStyle: .alert)
-                
-                let distributeAction = UIAlertAction(title: "Distribute", style: .default, handler: { (UIAlertAction) in
-                    self.goToDistributePage()
-                })
-                
-                let enrollAgainAction = UIAlertAction(title: "Enrollment", style: .default
-                    , handler: { (UIAlertAction) in
-                        self.createAnotherCustomer()
-                })
-                
-                alert.addAction(distributeAction)
-                alert.addAction(enrollAgainAction)
-                
-                self.present(alert, animated: true, completion: nil)
-                
-                //self.performSegue(withIdentifier: "makeADistribution", sender: self)
-            }
+    @IBAction func needIndicatorAddButtonPressed(_ sender: UIButton) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add Need Indicator", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            //what will happen once the user hits the add item on the UIAlert
+        self.needIndicatorArray.append(textField.text!)
         }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+        }
+        
+        
+    @IBAction func marketNameAddButtonPressed(_ sender: UIButton) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add Market Name", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            //what will happen once the user hits the add item on the UIAlert
+            self.marketPickerArray.append(textField.text!)
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+        
     }
     
-    func goToDistributePage() {
+    
+    @IBAction func primaryLanguageAddButtonPressed(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: "goToDistributionViewController", sender: self)
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add Primary Language", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            //what will happen once the user hits the add item on the UIAlert
+            self.languagePickerArray.append(textField.text!)
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+        
         
     }
     
-    func createAnotherCustomer() {
-        
-        self.performSegue(withIdentifier: "doToDistributionViewController" , sender: self)
-    }
-        
-        
-        
-    }
+    
+}
+
+
+
+
+
+
     
 
-    /*
+
+
+
+
+
+
+/*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
