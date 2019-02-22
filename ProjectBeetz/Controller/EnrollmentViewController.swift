@@ -120,9 +120,60 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
-    //Outlets
+    //Enroll button sends customer info to FireStore database and sets the state to the Distribute VC.
     
     
+    @IBAction func enrollButtonPressed(_ sender: UIButton) {
+        
+        Firestore.firestore().collection(CUSTOMERS_REF).addDocument(data: [
+            LAST_NAME : lastNameTextField.text!,
+            NEED_INDICATOR : needIndicatorTextField.text!,
+            CUSTOMER_ID : customerIDTextField.text!,
+            PRIMARY_LANGUAGE : primaryLanguageTextField.text!,
+            MARKET_NAME : marketNameTextField.text!,
+            HOUSEHOLD_SIZE : householdSizeTextField.text!,
+            //DATE_ENROLLED :  FieldValue.serverTimestamp(),
+            ZIP_CODE : zipCodeTextField.text!
+            
+        ]) { (err) in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                let alert = UIAlertController(title: "Customer Created!!", message: "Would you like to make a DISTRIBUTION? Or, create another CUSTOMER?", preferredStyle: .alert)
+                
+                let distributeAction = UIAlertAction(title: "Distribute", style: .default, handler: { (UIAlertAction) in
+                    self.goToDistributePage()
+                })
+                
+                let enrollAgainAction = UIAlertAction(title: "Enrollment", style: .default
+                    , handler: { (UIAlertAction) in
+                        self.createAnotherCustomer()
+                })
+                
+                alert.addAction(distributeAction)
+                alert.addAction(enrollAgainAction)
+                
+                self.present(alert, animated: true, completion: nil)
+                
+                //self.performSegue(withIdentifier: "makeADistribution", sender: self)
+            }
+        }
+    }
+    
+    func goToDistributePage() {
+        
+        self.performSegue(withIdentifier: "goToDistributionViewController", sender: self)
+        
+    }
+    
+    func createAnotherCustomer() {
+        
+        self.performSegue(withIdentifier: "doToDistributionViewController" , sender: self)
+    }
+        
+        
+        
+    }
     
 
     /*
@@ -134,5 +185,3 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // Pass the selected object to the new view controller.
     }
     */
-
-}

@@ -18,6 +18,7 @@
 		A4108B5D221EDFCE00D2CE2C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B5C221EDFCE00D2CE2C /* RegisterViewController.swift */; };
 		A4108B5F221EE1E100D2CE2C /* DistributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B5E221EE1E100D2CE2C /* DistributionViewController.swift */; };
 		A4108B61221EEA3F00D2CE2C /* EnrollmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B60221EEA3F00D2CE2C /* EnrollmentViewController.swift */; };
+		A4108B662220700900D2CE2C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B652220700800D2CE2C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A4108B5C221EDFCE00D2CE2C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A4108B5E221EE1E100D2CE2C /* DistributionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionViewController.swift; sourceTree = "<group>"; };
 		A4108B60221EEA3F00D2CE2C /* EnrollmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentViewController.swift; sourceTree = "<group>"; };
+		A4108B652220700800D2CE2C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E067FC7FC060755CC68C54FB /* Pods-ProjectBeetz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectBeetz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectBeetz/Pods-ProjectBeetz.debug.xcconfig"; sourceTree = "<group>"; };
 		F38066E879D6E615D85BF696 /* Pods-ProjectBeetz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectBeetz.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectBeetz/Pods-ProjectBeetz.release.xcconfig"; sourceTree = "<group>"; };
 		F5B67AEC3420D9E99A8454E8 /* Pods_ProjectBeetz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectBeetz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 		A4108B64221EF27600D2CE2C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4108B652220700800D2CE2C /* Constants.swift */,
 				A4108B46221EC7CA00D2CE2C /* AppDelegate.swift */,
 				A4108B48221EC7CA00D2CE2C /* WelcomeViewController.swift */,
 				A4108B5A221ED2EC00D2CE2C /* LoginViewController.swift */,
@@ -262,6 +265,7 @@
 				A4108B5B221ED2EC00D2CE2C /* LoginViewController.swift in Sources */,
 				A4108B49221EC7CA00D2CE2C /* WelcomeViewController.swift in Sources */,
 				A4108B47221EC7CA00D2CE2C /* AppDelegate.swift in Sources */,
+				A4108B662220700900D2CE2C /* Constants.swift in Sources */,
 				A4108B5D221EDFCE00D2CE2C /* RegisterViewController.swift in Sources */,
 				A4108B5F221EE1E100D2CE2C /* DistributionViewController.swift in Sources */,
 			);
