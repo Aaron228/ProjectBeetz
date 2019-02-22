@@ -6,14 +6,14 @@
 //  Copyright © 2019 Aaron Lee. All rights reserved.
 //
 
-//Thanks to Peter Witham for the guidance on setting up the pickers. //peterwitham.com/swift-archives/how-to-use-a-uipickerview-as-input-for-a-uitextfield/
+//Thanks to Peter Witham and "Start learn2Code" (on YouTube) for the guidance on setting up the pickers. //peterwitham.com/swift-archives/how-to-use-a-uipickerview-as-input-for-a-uitextfield/ 
 
 import UIKit
 import Firebase
 import SVProgressHUD
 import ChameleonFramework
 
-class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
+class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     var currentTextField = UITextField()
     var pickerView = UIPickerView()
