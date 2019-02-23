@@ -15,6 +15,8 @@ import ChameleonFramework
 
 class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
+    let db = Firestore.firestore()
+    
     var currentTextField = UITextField()
     var pickerView = UIPickerView()
     
@@ -125,7 +127,7 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBAction func enrollButtonPressed(_ sender: UIButton) {
 
-        Firestore.firestore().collection(CUSTOMERS_REF).addDocument(data: [
+        db.collection(CUSTOMERS_REF).addDocument(data: [
             LAST_NAME : lastNameTextField.text!,
             NEED_INDICATOR : needIndicatorTextField.text!,
             CUSTOMER_ID : customerIDTextField.text!,
@@ -168,7 +170,7 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     func createAnotherCustomer() {
 
-        self.performSegue(withIdentifier: "doToDistributionViewController" , sender: self)
+        self.performSegue(withIdentifier: "goToDistributionViewController" , sender: self)
     }
     
     // Add items buttons along the right hand side of the Enrollment view controller. Thanks Angela Yu.

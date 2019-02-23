@@ -287,6 +287,7 @@
                         <outlet property="needIndicatorTextField" destination="BSw-dK-itO" id="zCP-Ww-vHl"/>
                         <outlet property="primaryLanguageTextField" destination="Moq-fg-GEF" id="xgT-XP-Sq5"/>
                         <outlet property="zipCodeTextField" destination="nBR-HM-gPx" id="iZI-H3-tee"/>
+                        <segue destination="Rhl-JI-zpM" kind="show" identifier="goToDistributionViewController" id="KqS-K8-0Fd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLW-fw-UKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -359,6 +360,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8bA-TB-maI"/>
+        <segue reference="KqS-K8-0Fd"/>
     </inferredMetricsTieBreakers>
 </document>
