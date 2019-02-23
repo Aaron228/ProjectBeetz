@@ -126,8 +126,10 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     
     @IBAction func enrollButtonPressed(_ sender: UIButton) {
+        
+        var ref: DocumentReference? = nil
 
-        db.collection(CUSTOMERS_REF).addDocument(data: [
+        ref = db.collection(CUSTOMERS_REF).addDocument(data: [
             LAST_NAME : lastNameTextField.text!,
             NEED_INDICATOR : needIndicatorTextField.text!,
             CUSTOMER_ID : customerIDTextField.text!,
@@ -157,7 +159,7 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
                 self.present(alert, animated: true, completion: nil)
 
-                //self.performSegue(withIdentifier: "makeADistribution", sender: self)
+                print("Document added with ID: \(ref!.documentID)")
             }
         }
     }
