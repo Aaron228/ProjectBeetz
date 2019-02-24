@@ -25,6 +25,12 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         
+        guard let emailAddress = emailAddressTextField.text, !emailAddress.isEmpty else {
+            print("Email address")
+            self.showMessage(messageToDisplay: "Email address is required.")
+            return;
+        }
+        
         SVProgressHUD.show()
         
         Auth.auth().createUser(withEmail: emailAddressTextField.text!, password: passwordTextField.text!) { (user, error) in
@@ -37,14 +43,32 @@ class RegisterViewController: UIViewController {
                 print("Registration successful!")
                 
                 SVProgressHUD.dismiss()
+            
                 
                 self.performSegue(withIdentifier: "goToDistributionViewController", sender: self)
             }
         }
+    }
+        
+         func showMessage(messageToDisplay: String) {
+            let alertController = UIAlertController(title: "Alert title", message: messageToDisplay, preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) {
+                (action:UIAlertAction!) in
+                
+                //Code in this block will trigger when OK button is tapped.
+                
+                print("OK button tapped")
+            }
+            
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
         
     }
         
-    }
+
     /*
     // MARK: - Navigation
 
