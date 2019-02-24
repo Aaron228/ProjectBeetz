@@ -26,10 +26,15 @@ class RegisterViewController: UIViewController {
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         
         guard let emailAddress = emailAddressTextField.text, !emailAddress.isEmpty else {
-            print("Email address")
             self.showMessage(messageToDisplay: "Email address is required.")
             return;
         }
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            self.showMessage(messageToDisplay: "Password is required.")
+            return;
+        }
+        
+        print("Email address and password are entered into the appropriate fields")
         
         SVProgressHUD.show()
         
