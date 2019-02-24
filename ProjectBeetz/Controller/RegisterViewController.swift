@@ -15,6 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var registerUserTextLabel: UILabel!
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var repeatPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,16 @@ class RegisterViewController: UIViewController {
             self.showMessage(messageToDisplay: "Password is required.")
             return;
         }
+        guard let repeatPassword = repeatPasswordTextField.text, !repeatPassword.isEmpty else {
+            self.showMessage(messageToDisplay: "Repeat password is required.")
+            return;
+        }
+        
+        if password != repeatPassword {
+            self.showMessage(messageToDisplay: "Password and Repeat password don't match.")
+            return;
+        }
+        
         
         print("Email address and password are entered into the appropriate fields")
         
