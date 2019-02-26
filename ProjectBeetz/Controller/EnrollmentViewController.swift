@@ -241,12 +241,47 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    //This button log the user out, or throws an error if it can't.
+    
+    @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
         
+        do {
+            try Auth.auth().signOut()
+            
+            let welcomePage = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+            
+            let appDelegate = UIApplication.shared.delegate
+            appDelegate?.window??.rootViewController = welcomePage
+            
+        }
+        catch {
+            self.showMessage(messageToDisplay: "Not able to sign out at this time.")
+        }
         
     }
     
-    
+    func showMessage(messageToDisplay: String) {
+        let alertController = UIAlertController(title: "Alert title", message: messageToDisplay, preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) {
+            (action:UIAlertAction!) in
+            
+            //Code in this block will trigger when OK button is tapped.
+            
+            print("OK button tapped")
+        }
+        
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
 }
+
+
+
+
 
 
 

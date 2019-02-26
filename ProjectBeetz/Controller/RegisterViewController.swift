@@ -49,19 +49,31 @@ class RegisterViewController: UIViewController {
         
         SVProgressHUD.show()
         
+        // This registers the user and then send them an email to verify the account.
+        
         Auth.auth().createUser(withEmail: emailAddressTextField.text!, password: passwordTextField.text!) { (user, error) in
             
             if error != nil {
                 print(error!)
             }
             else {
-                //success
-                print("Registration successful!")
+                Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                    print("We've just sent you an email.")
+                    self.showMessage(messageToDisplay: "Please check your email for a link that will verify your account.")
+                })
                 
-                SVProgressHUD.dismiss()
+                //After sending verification email, the user is redirected to Login View Controller page. Thanks to Taiwosam on S.O. for the coherent explanation on using a soryboard ID.
+                
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                self.present(vc, animated: true, completion: nil)
+                
+                //This dismisses the spinning icon that lets user know shit is being processed.
+                
+            SVProgressHUD.dismiss()
             
+                //This action sends the user to the distribution view controller. You have to put the "self" in front of segue because the action is located in a "closure." The closure changes the scope of the action.
                 
-                self.performSegue(withIdentifier: "goToDistributionViewController", sender: self)
+                //self.performSegue(withIdentifier: "goToDistributionViewController", sender: self)
             }
         }
     }

@@ -12,6 +12,8 @@ import SVProgressHUD
 import ChameleonFramework
 
 class DistributionViewController: UIViewController {
+    
+    //var titleView: UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
