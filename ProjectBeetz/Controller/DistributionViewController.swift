@@ -36,4 +36,9 @@ class DistributionViewController: UIViewController {
         performSegue(withIdentifier: "goToEnrollmentViewController", sender: self)
     }
     
+    @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
+    
+    
 }

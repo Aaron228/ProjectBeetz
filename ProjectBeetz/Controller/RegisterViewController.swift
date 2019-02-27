@@ -6,6 +6,8 @@
 //  Copyright © 2019 Aaron Lee. All rights reserved.
 //
 
+//Thanks to Sean Allen at Dev Mountain for a decent explanation on how to set the constraints on buttons and such. www.youtube.com/watch?v=m_0_XQEfrGQ
+
 import UIKit
 import Firebase
 import SVProgressHUD
