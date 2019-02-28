@@ -43,6 +43,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func submitButtonPressed(_ sender: UIButton) {
         
+        guard let userEmail = emailAddressTextField.text, !userEmail.isEmpty else {
+            self.showMessage(messageToDisplay: "Not so fast. You're gonna need put in an email address.")
+            return
+        }
+        
+        guard let userPassword = passwordTextField.text, !userPassword.isEmpty else {
+            self.showMessage(messageToDisplay: "Whoa Nellie! Somebody forgot to enter a password.")
+            return
+        }
+        
         SVProgressHUD.show()
         
         Auth.auth().signIn(withEmail: emailAddressTextField.text!, password: passwordTextField.text!) { (user, error) in
@@ -64,6 +74,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         
+        
+    }
+    
+    func showMessage(messageToDisplay: String) {
+        let alertController = UIAlertController(title: "Alert title", message: messageToDisplay, preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) {
+            (action:UIAlertAction!) in
+            
+            //Code in this block will trigger when OK button is tapped.
+            
+            print("OK button tapped")
+        }
+        
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
         
     }
     

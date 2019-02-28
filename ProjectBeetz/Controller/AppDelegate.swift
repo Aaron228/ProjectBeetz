@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+//        if Auth.auth().currentUser != nil {
+//            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let nextView: DistributionViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DistributionViewController") as! DistributionViewController
+//            self.window?.rootViewController = nextView
+//
+//        }
+//
         return true
     }
 
