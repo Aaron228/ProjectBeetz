@@ -13,7 +13,7 @@ import Firebase
 import SVProgressHUD
 import ChameleonFramework
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerUserTextLabel: UILabel!
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -22,7 +22,27 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        emailAddressTextField.delegate = self
+        passwordTextField.delegate = self
+        repeatPasswordTextField.delegate = self
+    }
+    
+   //Dismisses the keyboards when clicking outside of the text fields
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        emailAddressTextField.resignFirstResponder();
+        passwordTextField.resignFirstResponder();
+        repeatPasswordTextField.resignFirstResponder()
+    }
+    
+    //Dismisses the keyboards when hitting return on the keyboard
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailAddressTextField.resignFirstResponder();
+        passwordTextField.resignFirstResponder();
+        repeatPasswordTextField.resignFirstResponder()
+        return true
     }
     
 

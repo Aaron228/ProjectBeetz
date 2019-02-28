@@ -69,6 +69,17 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         zipCodeTextField.resignFirstResponder()
     }
     
+    //Dismisses the keyboards when user hits return on text field keyboard.
+    
+ 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        lastNameTextField.resignFirstResponder();
+        customerIDTextField.resignFirstResponder();
+        householdSizeTextField.resignFirstResponder();
+        zipCodeTextField.resignFirstResponder()
+        return true
+    }
+    
     
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

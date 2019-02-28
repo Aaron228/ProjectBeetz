@@ -507,6 +507,9 @@
                         <viewLayoutGuide key="safeArea" id="HHW-gz-rIk"/>
                     </view>
                     <connections>
+                        <outlet property="customerIDTextField" destination="OTn-71-aol" id="4bg-g0-SDX"/>
+                        <outlet property="customerMatchTextField" destination="1dV-zK-s19" id="dbi-ej-1iw"/>
+                        <outlet property="lastNameTextField" destination="hMt-Gl-Bm2" id="rd6-Ka-K3z"/>
                         <segue destination="8ii-jV-b9O" kind="show" identifier="goToEnrollmentViewController" id="VRi-YI-N4A"/>
                     </connections>
                 </viewController>

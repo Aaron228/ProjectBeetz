@@ -11,19 +11,34 @@ import Firebase
 import SVProgressHUD
 import ChameleonFramework
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var emailAddressTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       emailAddressTextField.delegate = self
+       passwordTextField.delegate = self
     }
+    
+    //Dismisses the keyboards when clicking outside of the text fields
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        emailAddressTextField.resignFirstResponder();
+        passwordTextField.resignFirstResponder();
+    }
+    
+    //Dismisses the keyboards when hitting return on the keyboard
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailAddressTextField.resignFirstResponder();
+        passwordTextField.resignFirstResponder();
+        return true
+    }
+    
     
     
     @IBAction func submitButtonPressed(_ sender: UIButton) {
