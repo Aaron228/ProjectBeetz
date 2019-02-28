@@ -15,6 +15,8 @@ import ChameleonFramework
 
 class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
+    //Creates an instance of the database that customer info is sent to when the enrollment button is pressed.
+    
     let db = Firestore.firestore()
     
     var currentTextField = UITextField()
@@ -36,6 +38,8 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Delegates allow calling keyboard dismissal functions.
         
         lastNameTextField.delegate = self
         customerIDTextField.delegate = self
@@ -80,7 +84,7 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         return true
     }
     
-    
+    // Creates the picker views.
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -161,7 +165,7 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
             PRIMARY_LANGUAGE : primaryLanguageTextField.text!,
             MARKET_NAME : marketNameTextField.text!,
             HOUSEHOLD_SIZE : householdSizeTextField.text!,
-            //DATE_ENROLLED :  FieldValue.serverTimestamp(),
+            DATE_ENROLLED :  FieldValue.serverTimestamp(),
             ZIP_CODE : zipCodeTextField.text!
 
         ]) { (err) in

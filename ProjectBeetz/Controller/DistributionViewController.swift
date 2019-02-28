@@ -58,6 +58,8 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
     */
     @IBAction func erollmentButtonPressed(_ sender: UIButton) {
         
+       // DATE_DISTRIBUTED :  FieldValue.serverTimestamp()
+        
         performSegue(withIdentifier: "goToEnrollmentViewController", sender: self)
     }
     
