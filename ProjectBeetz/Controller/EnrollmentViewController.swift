@@ -37,6 +37,11 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        lastNameTextField.delegate = self
+        customerIDTextField.delegate = self
+        householdSizeTextField.delegate = self
+        zipCodeTextField.delegate = self
+        
         needIndicatorArray = ["EBT", "WIC", "Veggie Rx"]
         
         languagePickerArray = ["English", "Chinese", "Japanese"]
@@ -55,8 +60,17 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
     }
     
+    // Dismisses the keyboards when user clicks outside of the text fields.
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        lastNameTextField.resignFirstResponder();
+        customerIDTextField.resignFirstResponder();
+        householdSizeTextField.resignFirstResponder();
+        zipCodeTextField.resignFirstResponder()
+    }
     
     
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
