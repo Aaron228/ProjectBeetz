@@ -115,6 +115,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             self.present(alertController, animated: true, completion: nil)
             
         }
+    
+    //Takes user to the Login VC using the Login VC's storyboard ID.
+    
+    @IBAction func alreadyRegisteredButtonPressed(_ sender: UIButton) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        present(vc, animated: true, completion: nil)
+        
+    }
+    
         
     }
         

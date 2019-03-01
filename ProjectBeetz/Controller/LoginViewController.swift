@@ -73,6 +73,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    //Takes user to the Register VC using the Register VC's storyboard ID.
         
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController

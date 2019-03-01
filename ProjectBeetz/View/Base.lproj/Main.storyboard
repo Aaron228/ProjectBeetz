@@ -123,17 +123,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7u-BJ-oQc">
+                                <rect key="frame" x="96" y="404" width="183" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ryo-8I-CqX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Already registered?"/>
+                                <connections>
+                                    <action selector="alreadyRegisteredButtonPressed:" destination="K2s-k9-T1A" eventType="touchUpInside" id="Spl-2A-xMv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WJo-FV-HIh" firstAttribute="leading" secondItem="MGC-7z-hG6" secondAttribute="leading" constant="29" id="0gT-D2-cih"/>
                             <constraint firstItem="u1v-VU-Ndb" firstAttribute="leading" secondItem="MGC-7z-hG6" secondAttribute="leading" constant="29" id="2gr-YG-Pcv"/>
                             <constraint firstItem="CRc-62-sPV" firstAttribute="top" secondItem="2qO-C0-xyE" secondAttribute="topMargin" constant="46" id="7mR-eb-GXp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F7u-BJ-oQc" secondAttribute="trailing" constant="80" id="GXM-xs-lOH"/>
                             <constraint firstItem="MGC-7z-hG6" firstAttribute="trailing" secondItem="WJo-FV-HIh" secondAttribute="trailing" constant="29" id="I0c-Rc-bNW"/>
                             <constraint firstItem="xPD-k9-lQs" firstAttribute="top" secondItem="WJo-FV-HIh" secondAttribute="bottom" constant="26" id="OId-G4-JE0"/>
                             <constraint firstItem="WJo-FV-HIh" firstAttribute="top" secondItem="CRc-62-sPV" secondAttribute="bottom" constant="20" id="P16-WC-2Ue"/>
                             <constraint firstItem="Pem-Ud-FCx" firstAttribute="top" secondItem="u1v-VU-Ndb" secondAttribute="bottom" constant="30" id="SzH-bW-e26"/>
                             <constraint firstItem="CRc-62-sPV" firstAttribute="leading" secondItem="2qO-C0-xyE" secondAttribute="leadingMargin" constant="69" id="Ve6-WG-R3b"/>
+                            <constraint firstItem="F7u-BJ-oQc" firstAttribute="top" secondItem="Pem-Ud-FCx" secondAttribute="bottom" constant="32" id="dIq-gf-z2d"/>
                             <constraint firstItem="Pem-Ud-FCx" firstAttribute="leading" secondItem="MGC-7z-hG6" secondAttribute="leading" constant="110" id="ebF-0Z-Een"/>
                             <constraint firstItem="MGC-7z-hG6" firstAttribute="trailing" secondItem="u1v-VU-Ndb" secondAttribute="trailing" constant="29" id="eh6-Ur-rPC"/>
                             <constraint firstItem="MGC-7z-hG6" firstAttribute="trailing" secondItem="xPD-k9-lQs" secondAttribute="trailing" constant="29" id="f5a-em-05Z"/>
@@ -141,6 +154,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="CRc-62-sPV" secondAttribute="trailing" constant="71" id="rfk-vT-xLZ"/>
                             <constraint firstItem="u1v-VU-Ndb" firstAttribute="top" secondItem="xPD-k9-lQs" secondAttribute="bottom" constant="26" id="ufZ-Sm-Ks0"/>
                             <constraint firstItem="MGC-7z-hG6" firstAttribute="trailing" secondItem="Pem-Ud-FCx" secondAttribute="trailing" constant="112" id="ylP-Av-wnG"/>
+                            <constraint firstItem="F7u-BJ-oQc" firstAttribute="leading" secondItem="2qO-C0-xyE" secondAttribute="leadingMargin" constant="80" id="zVd-io-VDU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MGC-7z-hG6"/>
                     </view>
@@ -551,6 +565,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8bA-TB-maI"/>
+        <segue reference="pDu-LT-rfs"/>
     </inferredMetricsTieBreakers>
 </document>
