@@ -75,9 +75,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
         
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        present(vc, animated: true, completion: nil)
     }
+    
     
     func showMessage(messageToDisplay: String) {
         let alertController = UIAlertController(title: "Alert title", message: messageToDisplay, preferredStyle: .alert)
