@@ -25,6 +25,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         emailAddressTextField.delegate = self
         passwordTextField.delegate = self
         repeatPasswordTextField.delegate = self
+        
     }
     
    //Dismisses the keyboards when clicking outside of the text fields

@@ -442,7 +442,7 @@
         <!--Distribution View Controller-->
         <scene sceneID="0yo-R0-m0n">
             <objects>
-                <viewController id="Rhl-JI-zpM" customClass="DistributionViewController" customModule="ProjectBeetz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DistributionViewController" id="Rhl-JI-zpM" customClass="DistributionViewController" customModule="ProjectBeetz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iac-ID-YED">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
