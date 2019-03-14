@@ -45,7 +45,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //Guard statements are what check the textfields to make sure they contain something.
         
         guard let userEmail = emailAddressTextField.text, !userEmail.isEmpty else {
-            self.showMessage(messageToDisplay: "Not so fast. You're gonna need put in an email address.")
+            self.showMessage(messageToDisplay: "Not so super fast. You're gonna need put in an email address.")
             return
         }
         
