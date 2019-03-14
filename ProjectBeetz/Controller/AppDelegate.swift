@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        
+        
         //Thanks Alex at Rebeloper for guidance setting up IQKeyboardManager.
     
         IQKeyboardManager.shared.enable = true

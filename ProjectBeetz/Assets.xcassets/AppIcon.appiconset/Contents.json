@@ -106,16 +106,6 @@
       "idiom" : "ios-marketing",
       "size" : "1024x1024",
       "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "icon_20pt.png",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "icon_40pt.png",
-      "scale" : "1x"
     }
   ],
   "info" : {

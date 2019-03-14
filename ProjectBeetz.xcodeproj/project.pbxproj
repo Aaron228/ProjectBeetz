@@ -18,8 +18,6 @@
 		A4108B5F221EE1E100D2CE2C /* DistributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B5E221EE1E100D2CE2C /* DistributionViewController.swift */; };
 		A4108B61221EEA3F00D2CE2C /* EnrollmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B60221EEA3F00D2CE2C /* EnrollmentViewController.swift */; };
 		A4108B662220700900D2CE2C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108B652220700800D2CE2C /* Constants.swift */; };
-		A44F971B2221A2780063A2AB /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = A44F97192221A2770063A2AB /* coin.png */; };
-		A44F971C2221A2780063A2AB /* beet.png in Resources */ = {isa = PBXBuildFile; fileRef = A44F971A2221A2770063A2AB /* beet.png */; };
 		A454FB1C222B24E500B20C43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A454FB1B222B24E400B20C43 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +34,6 @@
 		A4108B5E221EE1E100D2CE2C /* DistributionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionViewController.swift; sourceTree = "<group>"; };
 		A4108B60221EEA3F00D2CE2C /* EnrollmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentViewController.swift; sourceTree = "<group>"; };
 		A4108B652220700800D2CE2C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A44F97192221A2770063A2AB /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
-		A44F971A2221A2770063A2AB /* beet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beet.png; sourceTree = "<group>"; };
 		A454FB1B222B24E400B20C43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E067FC7FC060755CC68C54FB /* Pods-ProjectBeetz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectBeetz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectBeetz/Pods-ProjectBeetz.debug.xcconfig"; sourceTree = "<group>"; };
 		F38066E879D6E615D85BF696 /* Pods-ProjectBeetz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectBeetz.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectBeetz/Pods-ProjectBeetz.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,8 +86,6 @@
 				A4108B63221EF26F00D2CE2C /* View */,
 				A4108B62221EF26500D2CE2C /* Model */,
 				A4108B4D221EC7CB00D2CE2C /* Assets.xcassets */,
-				A44F971A2221A2770063A2AB /* beet.png */,
-				A44F97192221A2770063A2AB /* coin.png */,
 				A4108B52221EC7CB00D2CE2C /* Info.plist */,
 				A454FB1B222B24E400B20C43 /* GoogleService-Info.plist */,
 			);
@@ -196,11 +190,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A44F971B2221A2780063A2AB /* coin.png in Resources */,
 				A4108B51221EC7CB00D2CE2C /* LaunchScreen.storyboard in Resources */,
 				A4108B4E221EC7CB00D2CE2C /* Assets.xcassets in Resources */,
 				A4108B4C221EC7CA00D2CE2C /* Main.storyboard in Resources */,
-				A44F971C2221A2780063A2AB /* beet.png in Resources */,
 				A454FB1C222B24E500B20C43 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
