@@ -11,13 +11,15 @@
 import UIKit
 import Firebase
 import SVProgressHUD
-import ChameleonFramework
 
 class DistributionViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var customerIDTextField: UITextField!
-    @IBOutlet weak var customerMatchTextField: UITextField!
+    @IBOutlet weak var availableMatchLabel: UILabel!
+     @IBOutlet weak var matchAmountAvailableTextField: UITextField!
+    @IBOutlet weak var customerRequestField: UITextField!
+    @IBOutlet weak var customerOwesTextField: UITextField!
     
     
     //var titleView: UIView?
@@ -27,8 +29,17 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
         
      lastNameTextField.delegate = self
      customerIDTextField.delegate = self
-    
+     matchAmountAvailableTextField.text = "10"
     }
+    
+    //Thanks PhysicsFrac for the guidance. Youtube. //www.youtube.com/watch?v=bkjYqy-Inro
+    
+    @IBAction func makeDistributionButton(_ sender: UIButton){
+        
+        //MARK: Write a function that subtracts the customer contribution from the amount of available match.
+    }
+    
+   
     
     //Dismisses the keyboards when clicking outside of the text fields
     
@@ -60,12 +71,39 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
         
        // DATE_DISTRIBUTED :  FieldValue.serverTimestamp()
         
-        performSegue(withIdentifier: "goToEnrollmentViewController", sender: self)
+        performSegue(withIdentifier: "EnrollmentViewController", sender: self)
     }
     
     @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
+    
+        do {
+            try Auth.auth().signOut()
+            
+            let welcomePage = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+            
+            let appDelegate = UIApplication.shared.delegate
+            appDelegate?.window??.rootViewController = welcomePage
+            
+        }
+        catch {
+            self.showMessage(messageToDisplay: "Not able to sign out at this time.")
+        }
+        
     }
     
-    
-    
+    func showMessage(messageToDisplay: String) {
+        let alertController = UIAlertController(title: "Alert title", message: messageToDisplay, preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) {
+            (action:UIAlertAction!) in
+            
+            //Code in this block will trigger when OK button is tapped.
+            
+            print("OK button tapped")
+        }
+        
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
 }

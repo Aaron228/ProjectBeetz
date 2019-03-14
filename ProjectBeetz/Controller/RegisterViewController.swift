@@ -11,7 +11,6 @@
 import UIKit
 import Firebase
 import SVProgressHUD
-import ChameleonFramework
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerUserTextLabel: UILabel!

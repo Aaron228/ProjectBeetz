@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import SVProgressHUD
-import ChameleonFramework
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginLabel: UILabel!
