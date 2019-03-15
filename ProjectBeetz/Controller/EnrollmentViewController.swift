@@ -155,8 +155,14 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBAction func enrollButtonPressed(_ sender: UIButton) {
         
+        if lastNameTextField.text != nil && lastNameTextField.text != "",
+           needIndicatorTextField.text != nil && needIndicatorTextField.text != "",
+           customerIDTextField.text!.count < 7 && customerIDTextField.text != nil,
+           marketNameTextField.text != nil && marketNameTextField.text != ""
+        {
+            
         var ref: DocumentReference? = nil
-
+        
         ref = db.collection(CUSTOMERS_REF).addDocument(data: [
             LAST_NAME : lastNameTextField.text!,
             NEED_INDICATOR : needIndicatorTextField.text!,
@@ -166,32 +172,56 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
             HOUSEHOLD_SIZE : householdSizeTextField.text!,
             DATE_ENROLLED :  FieldValue.serverTimestamp(),
             ZIP_CODE : zipCodeTextField.text!
-
-        ]) { (err) in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                let alert = UIAlertController(title: "Customer Created!!", message: "Would you like to make a DISTRIBUTION? Or, create another CUSTOMER?", preferredStyle: .alert)
-
-                let distributeAction = UIAlertAction(title: "Distribute", style: .default, handler: { (UIAlertAction) in
-                    self.goToDistributePage()
-                })
-
-                let enrollAgainAction = UIAlertAction(title: "Enrollment", style: .default
-                    , handler: { (UIAlertAction) in
-                        self.createAnotherCustomer()
-                })
-
-                alert.addAction(distributeAction)
-                alert.addAction(enrollAgainAction)
-
-                self.present(alert, animated: true, completion: nil)
-
-                print("Document added with ID: \(ref!.documentID)")
-            }
+            ])
+            let alert = UIAlertController(title: "Customer Created!!", message: "Would you like to make a DISTRIBUTION? Or, create another CUSTOMER?", preferredStyle: .alert)
+            
+                            let distributeAction = UIAlertAction(title: "Distribute", style: .default, handler: { (UIAlertAction) in
+                                self.goToDistributePage()
+                            })
+            
+                            let enrollAgainAction = UIAlertAction(title: "Enrollment", style: .default
+                                , handler: { (UIAlertAction) in
+                                    self.createAnotherCustomer()
+                            })
+            
+                            alert.addAction(distributeAction)
+                            alert.addAction(enrollAgainAction)
+            
+                            self.present(alert, animated: true, completion: nil)
+            
+                            print("Document added with ID: \(ref!.documentID)")
+        }
+        else {
+            print("Please fill all required fields.")
         }
     }
 
+//        ]) { (err) in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//            } else {
+//                let alert = UIAlertController(title: "Customer Created!!", message: "Would you like to make a DISTRIBUTION? Or, create another CUSTOMER?", preferredStyle: .alert)
+//
+//                let distributeAction = UIAlertAction(title: "Distribute", style: .default, handler: { (UIAlertAction) in
+//                    self.goToDistributePage()
+//                })
+//
+//                let enrollAgainAction = UIAlertAction(title: "Enrollment", style: .default
+//                    , handler: { (UIAlertAction) in
+//                        self.createAnotherCustomer()
+//                })
+//
+//                alert.addAction(distributeAction)
+//                alert.addAction(enrollAgainAction)
+//
+//                self.present(alert, animated: true, completion: nil)
+//
+//                print("Document added with ID: \(ref!.documentID)")
+//            }
+//        }
+//    }
+//    }
+//
     func goToDistributePage() {
 
         self.performSegue(withIdentifier: "goToDistributionViewController", sender: self)
@@ -202,30 +232,30 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
         self.performSegue(withIdentifier: "goToDistributionViewController" , sender: self)
     }
-    
+
     // Add items buttons along the right hand side of the Enrollment view controller. Thanks Angela Yu.
-        
+
     @IBAction func needIndicatorAddButtonPressed(_ sender: UIButton) {
-        
+
         var textField = UITextField()
-        
+
         let alert = UIAlertController(title: "Add Need Indicator", message: "", preferredStyle: .alert)
-        
+
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             //what will happen once the user hits the add item on the UIAlert
         self.needIndicatorArray.append(textField.text!)
         }
-        
+
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new item"
             textField = alertTextField
         }
-        
+
         alert.addAction(action)
-        
+
         present(alert, animated: true, completion: nil)
         }
-        
+    
         
     @IBAction func marketNameAddButtonPressed(_ sender: UIButton) {
         
@@ -305,6 +335,18 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         self.present(alertController, animated: true, completion: nil)
         
     }
+    
+    func checkFirstName(name: String) {
+        
+        let name: String? = lastNameTextField.text
+        guard let temp = name, temp.count < 2 else {
+            showMessage(messageToDisplay: "That is too many letters.")
+            return
+        }
+    }
+    
+    
+    
 }
 
 

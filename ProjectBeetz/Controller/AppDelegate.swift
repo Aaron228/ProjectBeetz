@@ -21,19 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
-        
         //Thanks Alex at Rebeloper for guidance setting up IQKeyboardManager.
     
         IQKeyboardManager.shared.enable = true
         
         FirebaseApp.configure()
         
-        if Auth.auth().currentUser != nil {
-            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextView: DistributionViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DistributionViewController") as! DistributionViewController
-            self.window?.rootViewController = nextView
-
-        }
+//        if Auth.auth().currentUser != nil {
+//            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let nextView: DistributionViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DistributionViewController") as! DistributionViewController
+//            self.window?.rootViewController = nextView
+//
+//        }
 
         return true
     }

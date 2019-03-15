@@ -284,7 +284,7 @@
                                     <action selector="enrollButtonPressed:" destination="8ii-jV-b9O" eventType="touchUpInside" id="fDS-fF-shM"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4yS-E0-M8D">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name (required)" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4yS-E0-M8D">
                                 <rect key="frame" x="80" y="110" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MJW-yq-Qk9"/>
@@ -293,7 +293,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer ID" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iJc-TR-2qd">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer ID (required)" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iJc-TR-2qd">
                                 <rect key="frame" x="80" y="166" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GwF-dJ-qdJ"/>
@@ -302,7 +302,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nBR-HM-gPx">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code (optional)" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nBR-HM-gPx">
                                 <rect key="frame" x="80" y="446" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rD5-HE-DwR"/>
@@ -311,7 +311,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Need Indicator" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BSw-dK-itO">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Need Indicator (required)" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BSw-dK-itO">
                                 <rect key="frame" x="80" y="222" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ryk-AE-oeR"/>
@@ -323,7 +323,7 @@
                                     <outlet property="delegate" destination="8ii-jV-b9O" id="awN-TZ-hNU"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Market name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-8k-bNc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Market name (required)" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-8k-bNc">
                                 <rect key="frame" x="80" y="278" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bH5-8E-aXZ"/>
@@ -335,7 +335,7 @@
                                     <outlet property="delegate" destination="8ii-jV-b9O" id="pTA-sK-9cw"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Primary language" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Moq-fg-GEF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Primary language (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Moq-fg-GEF">
                                 <rect key="frame" x="80" y="334" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="J16-09-BEF"/>
@@ -347,7 +347,7 @@
                                     <outlet property="delegate" destination="8ii-jV-b9O" id="OKV-Hu-7yp"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Household Size" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="aAv-0d-Ksd">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Household Size (optional)" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="aAv-0d-Ksd">
                                 <rect key="frame" x="80" y="390" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="575-rO-fw2"/>

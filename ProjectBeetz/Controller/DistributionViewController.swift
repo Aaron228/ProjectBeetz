@@ -17,7 +17,7 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var customerIDTextField: UITextField!
     @IBOutlet weak var availableMatchLabel: UILabel!
-     @IBOutlet weak var matchAmountAvailableTextField: UITextField!
+    @IBOutlet weak var matchAmountAvailableTextField: UITextField!
     @IBOutlet weak var customerRequestField: UITextField!
     @IBOutlet weak var customerOwesTextField: UITextField!
     
@@ -27,9 +27,12 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+     
+        
      lastNameTextField.delegate = self
      customerIDTextField.delegate = self
      matchAmountAvailableTextField.text = "10"
+    
     }
     
     //Thanks PhysicsFrac for the guidance. Youtube. //www.youtube.com/watch?v=bkjYqy-Inro
@@ -106,4 +109,6 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
         self.present(alertController, animated: true, completion: nil)
         
     }
+    
+    
 }
