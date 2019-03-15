@@ -191,10 +191,22 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
             
                             print("Document added with ID: \(ref!.documentID)")
         }
-        else {
-            print("Please fill all required fields.")
+        else if lastNameTextField.text == nil || lastNameTextField.text! == "" {
+                print("Last name field is required.")
         }
-    }
+        else if needIndicatorTextField.text == nil || needIndicatorTextField.text! == "" {
+                print("Please select a need indicator.")
+            }
+        else if customerIDTextField.text == nil || customerIDTextField.text!.count > 7 {
+                print("Please provide a customer ID up to 6 digits long.")
+        }
+        else if marketNameTextField.text == nil || marketNameTextField.text! == "" {
+                print("Please select a market name.")
+        }
+        else {
+            print("Something has gone horribly wrong!")
+        }
+        }
 
 //        ]) { (err) in
 //            if let err = err {
