@@ -45,21 +45,14 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         householdSizeTextField.delegate = self
         zipCodeTextField.delegate = self
         
-        needIndicatorArray = ["EBT", "WIC", "Veggie Rx"]
+        //These arrays assign values to the UI picker views.
         
-        languagePickerArray = ["English", "Chinese", "Japanese"]
+        needIndicatorArray = ["---", "EBT", "WIC", "Veggie Rx"]
         
-        marketPickerArray = ["Sunnyvale", "Downtown Market", "Midvale"]
+        languagePickerArray = ["---", "English", "Chinese", "Japanese"]
         
-        //UI Picker constants
+        marketPickerArray = ["---", "Sunnyvale", "Downtown Market", "Midvale"]
         
-        //let languagePicker = UIPickerView()
-        // let marketNamePicker = UIPickerView()
-        // let needIndicatorPicker = UIPickerView()
-        
-        //        primaryLanguageTextField.inputView = languagePicker
-        //
-        //        languagePicker.delegate = self
         
     }
     
@@ -320,8 +313,8 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         do {
             try Auth.auth().signOut()
             
-            let welcomePage = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
-            
+            let welcomePage = self.storyboard?.instantiateViewController(withIdentifier: "UINavigationController") as! UINavigationController
+
             let appDelegate = UIApplication.shared.delegate
             appDelegate?.window??.rootViewController = welcomePage
             
@@ -348,14 +341,6 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
     }
     
-    func checkFirstName(name: String) {
-        
-        let name: String? = lastNameTextField.text
-        guard let temp = name, temp.count < 2 else {
-            showMessage(messageToDisplay: "That is too many letters.")
-            return
-        }
-    }
     
     
     
