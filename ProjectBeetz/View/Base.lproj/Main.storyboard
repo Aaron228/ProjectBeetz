@@ -572,7 +572,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Distribute" largeTitleDisplayMode="never" id="k8J-0g-T5x">
                         <barButtonItem key="backBarButtonItem" title="Back" id="lJ4-hw-DMg"/>
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="1tN-hO-SXF"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="1tN-hO-SXF">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="Rhl-JI-zpM" id="QVf-AZ-xrv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -609,6 +613,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="a71-Nk-ACX"/>
         <segue reference="KqS-K8-0Fd"/>
     </inferredMetricsTieBreakers>
 </document>

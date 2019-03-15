@@ -77,12 +77,13 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "EnrollmentViewController", sender: self)
     }
     
+   
     @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
     
         do {
             try Auth.auth().signOut()
             
-            let welcomePage = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+            let welcomePage = self.storyboard?.instantiateViewController(withIdentifier: "UINavigationController") as! UINavigationController
             
             let appDelegate = UIApplication.shared.delegate
             appDelegate?.window??.rootViewController = welcomePage
