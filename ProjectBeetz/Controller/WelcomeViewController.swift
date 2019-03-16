@@ -15,6 +15,8 @@ class WelcomeViewController: UIViewController {
         
         performSegue(withIdentifier: "goToLoginViewController", sender: self)
     }
+    
+    
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToRegisterViewController", sender: self)
     }
@@ -23,10 +25,17 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
     }
     
     
