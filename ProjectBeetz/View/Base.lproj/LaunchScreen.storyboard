@@ -19,31 +19,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beet" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-J1-yWp">
-                                <rect key="frame" x="12" y="158" width="350" height="350"/>
+                                <rect key="frame" x="62" y="208" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="8d2-TH-LWF"/>
-                                    <constraint firstAttribute="width" constant="350" id="V2g-0s-4kE"/>
+                                    <constraint firstAttribute="height" constant="250" id="8d2-TH-LWF"/>
+                                    <constraint firstAttribute="width" constant="250" id="V2g-0s-4kE"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beet Coin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qy-tM-Cnb">
-                                <rect key="frame" x="75" y="551" width="225" height="50"/>
+                                <rect key="frame" x="75" y="466" width="225" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Y7b-nM-bNW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94403737783432007" green="0.85968685479896856" blue="0.72488993244799482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xGW-J1-yWp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="138" id="AYY-wZ-oQP"/>
+                            <constraint firstItem="xGW-J1-yWp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="188" id="AYY-wZ-oQP"/>
                             <constraint firstItem="4qy-tM-Cnb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="C60-jB-2Wg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xGW-J1-yWp" secondAttribute="trailing" constant="13" id="Epr-GI-eXf"/>
-                            <constraint firstItem="xGW-J1-yWp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="ZF6-8e-2PG"/>
-                            <constraint firstItem="4qy-tM-Cnb" firstAttribute="top" secondItem="xGW-J1-yWp" secondAttribute="bottom" constant="43" id="eaH-G1-mWd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xGW-J1-yWp" secondAttribute="trailing" constant="63" id="Epr-GI-eXf"/>
+                            <constraint firstItem="xGW-J1-yWp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="ZF6-8e-2PG"/>
+                            <constraint firstItem="4qy-tM-Cnb" firstAttribute="top" secondItem="xGW-J1-yWp" secondAttribute="bottom" constant="8" id="eaH-G1-mWd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4qy-tM-Cnb" secondAttribute="trailing" constant="75" id="qAl-C7-cic"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xGW-J1-yWp" secondAttribute="bottom" constant="159" id="uov-FK-khk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xGW-J1-yWp" secondAttribute="bottom" constant="209" id="uov-FK-khk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
