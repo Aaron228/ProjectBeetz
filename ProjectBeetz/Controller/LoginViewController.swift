@@ -96,6 +96,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    @IBAction func leaveCommentButtonPressed(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "FeedbackViewController") as! FeedbackViewController
+        present(vc, animated: true, completion: nil)
+        
+    }
+    
     }
     
     

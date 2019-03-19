@@ -86,7 +86,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 
                 //After sending verification email, the user is redirected to Login View Controller page. Thanks to Taiwosam on S.O. for the coherent explanation on using a soryboard ID.
                 
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "UINavigationController") as! UINavigationController
                 self.present(vc, animated: true, completion: nil)
                 
                 //This dismisses the spinning icon that lets user know shit is being processed.

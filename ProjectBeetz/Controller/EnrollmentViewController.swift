@@ -233,6 +233,8 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     }
 
+    //Thanks Nef10, S.O.
+    
     func createAnotherCustomer() {
         
         lastNameTextField.text = "";
