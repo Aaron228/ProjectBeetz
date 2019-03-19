@@ -116,8 +116,8 @@
 				A4108B48221EC7CA00D2CE2C /* WelcomeViewController.swift */,
 				A4108B5A221ED2EC00D2CE2C /* LoginViewController.swift */,
 				A4108B5C221EDFCE00D2CE2C /* RegisterViewController.swift */,
-				A4108B60221EEA3F00D2CE2C /* EnrollmentViewController.swift */,
 				A4108B5E221EE1E100D2CE2C /* DistributionViewController.swift */,
+				A4108B60221EEA3F00D2CE2C /* EnrollmentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

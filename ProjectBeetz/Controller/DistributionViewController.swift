@@ -27,8 +27,6 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     
-        
      lastNameTextField.delegate = self
      customerIDTextField.delegate = self
      matchAmountAvailableTextField.text = "10"
@@ -39,10 +37,35 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func makeDistributionButton(_ sender: UIButton){
         
-        //MARK: Write a function that subtracts the customer contribution from the amount of available match.
+        if Int(customerIDTextField.text!)! <= 6 && Int(customerIDTextField.text!)! > 0 {
+        
+        calculateWhatCustomerOwes((Any).self)
+        }
+        else if Int(customerIDTextField.text!)! > 7 {
+            showMessage(messageToDisplay: "The customer ID you entered is no good.")
+        }
+        else {
+            return
+        }
     }
     
-   
+    func calculateWhatCustomerOwes(_ sender: Any) {
+        
+        if Int(matchAmountAvailableTextField.text!)! <= 10 && Int(matchAmountAvailableTextField.text!)! >= 0,
+            Int(customerRequestField.text!)! > 0 && Int(customerRequestField.text!)! < 500
+            {
+            
+            let a = Int(customerRequestField.text!)
+            let b = Int(matchAmountAvailableTextField.text!)
+            
+            customerOwesTextField.text = "\(a! - b!)"
+                
+        }
+        else {
+            showMessage(messageToDisplay: "That number is broke. Need a better number.")
+        }
+    }
+            
     
     //Dismisses the keyboards when clicking outside of the text fields
     

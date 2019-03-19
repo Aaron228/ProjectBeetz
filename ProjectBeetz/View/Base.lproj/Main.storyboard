@@ -44,10 +44,10 @@
                                     <action selector="registerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ry6-ku-W9p"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beet" translatesAutoresizingMaskIntoConstraints="NO" id="YSh-JQ-fcu">
-                                <rect key="frame" x="73" y="197" width="175" height="175"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beet" translatesAutoresizingMaskIntoConstraints="NO" id="YSh-JQ-fcu">
+                                <rect key="frame" x="73" y="197" width="185" height="185"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="LIa-xQ-yqK"/>
+                                    <constraint firstAttribute="height" constant="185" id="LIa-xQ-yqK"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beet Coin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-yQ-Jnu">
@@ -67,10 +67,10 @@
                             <constraint firstItem="8Ae-iA-qEk" firstAttribute="top" secondItem="g4W-p3-qxX" secondAttribute="bottom" constant="8" id="Dw7-Tl-ozU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Ae-iA-qEk" secondAttribute="bottom" constant="56" id="KY5-nD-mu6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8Ae-iA-qEk" secondAttribute="trailing" constant="30" id="O50-8j-pAS"/>
-                            <constraint firstItem="g4W-p3-qxX" firstAttribute="top" secondItem="YSh-JQ-fcu" secondAttribute="bottom" constant="52" id="T6m-cd-WX7"/>
+                            <constraint firstItem="g4W-p3-qxX" firstAttribute="top" secondItem="YSh-JQ-fcu" secondAttribute="bottom" constant="42" id="T6m-cd-WX7"/>
                             <constraint firstItem="g4W-p3-qxX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="TgN-0F-JwQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g4W-p3-qxX" secondAttribute="trailing" constant="29" id="Zs6-e8-1Zj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YSh-JQ-fcu" secondAttribute="trailing" constant="72" id="fZl-o8-pp2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YSh-JQ-fcu" secondAttribute="trailing" constant="62" id="fZl-o8-pp2"/>
                             <constraint firstItem="8Ae-iA-qEk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="hAk-bV-laU"/>
                             <constraint firstItem="hk7-yQ-Jnu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="o5I-1k-DVl"/>
                             <constraint firstItem="YSh-JQ-fcu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="rtJ-z1-pz0"/>
@@ -289,7 +289,7 @@
         <!--Enroll-->
         <scene sceneID="21L-Q8-mck">
             <objects>
-                <viewController id="8ii-jV-b9O" customClass="EnrollmentViewController" customModule="ProjectBeetz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnrollmentViewController" id="8ii-jV-b9O" customClass="EnrollmentViewController" customModule="ProjectBeetz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0CU-O0-RqI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -642,6 +642,6 @@
         <image name="beet" width="1147" height="1097"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8bA-TB-maI"/>
+        <segue reference="KqS-K8-0Fd"/>
     </inferredMetricsTieBreakers>
 </document>

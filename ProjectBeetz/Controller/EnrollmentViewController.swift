@@ -150,7 +150,7 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         if lastNameTextField.text != nil && lastNameTextField.text != "",
            needIndicatorTextField.text != nil && needIndicatorTextField.text != "",
-           customerIDTextField.text!.count < 7 && customerIDTextField.text != nil,
+           customerIDTextField.text!.count < 7 && customerIDTextField.text != nil && customerIDTextField.text != "",
            marketNameTextField.text != nil && marketNameTextField.text != ""
         {
             
@@ -184,13 +184,10 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
             
                             print("Document added with ID: \(ref!.documentID)")
         }
-        else if lastNameTextField.text == nil {
+        else if lastNameTextField.text == nil || lastNameTextField.text! == ""{
             showMessage(messageToDisplay: "You must enter a last name.")
         }
-        else if lastNameTextField.text! == "" {
-            showMessage(messageToDisplay: "You must enter a last name.")
-        }
-        else if customerIDTextField.text == nil || customerIDTextField.text!.count < 0 {
+        else if customerIDTextField.text == nil || customerIDTextField.text!.count < 0 || customerIDTextField.text == "" {
             showMessage(messageToDisplay: "Please provide a Customer ID that's between 0 and 6 digits.")
         }
         else if needIndicatorTextField.text == nil || needIndicatorTextField.text! == "" {
@@ -237,8 +234,14 @@ class EnrollmentViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
 
     func createAnotherCustomer() {
-
-        self.performSegue(withIdentifier: "goToDistributionViewController" , sender: self)
+        
+        lastNameTextField.text = "";
+        needIndicatorTextField.text = "";
+        customerIDTextField.text = "";
+        marketNameTextField.text = "";
+        primaryLanguageTextField.text = "";
+        householdSizeTextField.text = "";
+        zipCodeTextField.text = ""
     }
 
     // Add items buttons along the right hand side of the Enrollment view controller. Thanks Angela Yu.
