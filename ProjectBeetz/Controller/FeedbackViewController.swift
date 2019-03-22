@@ -26,21 +26,35 @@ class FeedbackViewController: UIViewController, MFMailComposeViewControllerDeleg
 
     @IBAction func sendButtonPressed(_ sender: AnyObject) {
         
-        let toRecipients = ["intp81@gmail.com"]
+        let mailComposeViewController = configureMailController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            showMailError()
+        }
+    }
+    
+    func configureMailController() -> MFMailComposeViewController {
         
-        let mc: MFMailComposeViewController = MFMailComposeViewController()
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
         
-        mc.mailComposeDelegate = self
+        mailComposerVC.setToRecipients(["intp81@gmail.com"])
+        mailComposerVC.setSubject("Hello")
+        mailComposerVC.setMessageBody("How are you doing?", isHTML: false)
         
-        mc.setToRecipients(toRecipients)
-        mc.setSubject(nameTextField.text!)
-        
-        mc.setMessageBody("Name: \(nameTextField.text!) \n\nEmail: \(emailTextField.text!) \n\nMessage: \(commentTextField.text!)", isHTML: false)
-        
-        self.present(mc, animated: true, completion: nil)
-        
+        return mailComposerVC
+    }
+    
+    func showMailError() {
+        let sendMailErrorAlert = UIAlertController(title: "Could not send email", message: "Your device could not send email", preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "OK", style: .default, handler: nil)
+        sendMailErrorAlert.addAction(dismiss)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 
-    
-    
 }

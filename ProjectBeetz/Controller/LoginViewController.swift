@@ -9,8 +9,10 @@
 import UIKit
 import Firebase
 import SVProgressHUD
+import MessageUI
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
+    
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -99,12 +101,38 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func leaveCommentButtonPressed(_ sender: Any) {
         
-        let vc = storyboard?.instantiateViewController(withIdentifier: "FeedbackViewController") as! FeedbackViewController
-        present(vc, animated: true, completion: nil)
-        
+        let mailComposeViewController = configureMailController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            showMailError()
+        }
     }
     
+    func configureMailController() -> MFMailComposeViewController {
+        
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        
+        mailComposerVC.setToRecipients(["intp81@gmail.com"])
+        mailComposerVC.setSubject("Hello")
+        mailComposerVC.setMessageBody("How are you doing?", isHTML: false)
+        
+        return mailComposerVC
     }
+    
+    func showMailError() {
+        let sendMailErrorAlert = UIAlertController(title: "Could not send email", message: "Your device could not send email", preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "OK", style: .default, handler: nil)
+        sendMailErrorAlert.addAction(dismiss)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+
+}
     
     
 

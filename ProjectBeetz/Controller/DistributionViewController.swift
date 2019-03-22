@@ -37,17 +37,28 @@ class DistributionViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func makeDistributionButton(_ sender: UIButton){
         
-        if Int(customerIDTextField.text!)! <= 6 && Int(customerIDTextField.text!)! > 0 {
+        checkLengthCustomerID(id: customerIDTextField.text)
+
+    }
+    
+    //Checks the length of the Customer ID to verify the entry is more than 0 characters and less than 4 characters.
+    
+    func checkLengthCustomerID(id: String?) {
         
-        calculateWhatCustomerOwes((Any).self)
-        }
-        else if Int(customerIDTextField.text!)! > 7 {
-            showMessage(messageToDisplay: "The customer ID you entered is no good.")
-        }
-        else {
+        guard let tempID = customerIDTextField.text, tempID.count > 0 && tempID.count < 5 else {
+            showMessage(messageToDisplay: "Enter a customer ID between 1 and 4 characters.")
             return
         }
     }
+    
+    func checkLengthLastInitial(lastInitial: String?) {
+        
+        guard let tempInit = lastNameTextField.text, tempInit.count == 1 else {
+            showMessage(messageToDisplay: "The last initial field can only have one letter.")
+            return
+        }
+    }
+    
     
     func calculateWhatCustomerOwes(_ sender: Any) {
         
